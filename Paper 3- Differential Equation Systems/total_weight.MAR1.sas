@@ -1,3 +1,5 @@
+This is a change.
+
 proc import out=work.data
 datafile= 'e:/paper 3-NAE Data/Final Data Sets/composite_price_input.csv'
 dbms=csv replace;
@@ -64,7 +66,7 @@ dlnCorn=log(corn_p/lag1(corn_p));
 lnCorn=log(corn_P);
 
 id=_n_;
-if id=1 then delete; 
+if id=1 then delete;
 
 
 run;
@@ -114,4 +116,3 @@ proc reg data=work.data;
 model lntotal_breast=lncorn lnweight_breast dlntotal_breast id;
 run;
 *r-squared is .76 but price is negative and significant;
-
